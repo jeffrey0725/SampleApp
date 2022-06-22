@@ -164,7 +164,6 @@
 				DE6BC4A74C6500A22BB9A283 /* Pods-SampleAppTests.debug.xcconfig */,
 				995D22D74C5AB0C6FF1C10E8 /* Pods-SampleAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
