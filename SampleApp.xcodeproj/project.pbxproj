@@ -16,6 +16,8 @@
 		21D39A812862BA6B00097C05 /* SampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D39A802862BA6B00097C05 /* SampleAppTests.swift */; };
 		21D39A8B2862BA6B00097C05 /* SampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D39A8A2862BA6B00097C05 /* SampleAppUITests.swift */; };
 		21D39A8D2862BA6B00097C05 /* SampleAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D39A8C2862BA6B00097C05 /* SampleAppUITestsLaunchTests.swift */; };
+		21D39A9B286386D400097C05 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D39A9A286386D400097C05 /* APIEndpoint.swift */; };
+		21D39A9D2863960B00097C05 /* APIPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D39A9C2863960B00097C05 /* APIPath.swift */; };
 		81CE5D8A3E85CD4BA64D5AFE /* Pods_SampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF31BB8A9E9455C01BC3A87 /* Pods_SampleAppTests.framework */; };
 		8266576CF24C71A9ECD4DA77 /* Pods_SampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0DFD591260557100696A078 /* Pods_SampleApp.framework */; };
 		9BA863BB91912E615C916306 /* Pods_SampleApp_SampleAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C0E2B5F67389F51197EF8F /* Pods_SampleApp_SampleAppUITests.framework */; };
@@ -53,6 +55,8 @@
 		21D39A862862BA6B00097C05 /* SampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21D39A8A2862BA6B00097C05 /* SampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAppUITests.swift; sourceTree = "<group>"; };
 		21D39A8C2862BA6B00097C05 /* SampleAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		21D39A9A286386D400097C05 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		21D39A9C2863960B00097C05 /* APIPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPath.swift; sourceTree = "<group>"; };
 		50F08996773B076E8CF0525F /* Pods-SampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleApp.debug.xcconfig"; path = "Target Support Files/Pods-SampleApp/Pods-SampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		77C0E2B5F67389F51197EF8F /* Pods_SampleApp_SampleAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleApp_SampleAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F39F3FB652E8968EF95B56E /* Pods-SampleApp-SampleAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleApp-SampleAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-SampleApp-SampleAppUITests/Pods-SampleApp-SampleAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 		21D39A682862BA6800097C05 /* SampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				21D39A99286386B300097C05 /* API */,
 				21D39A692862BA6800097C05 /* AppDelegate.swift */,
 				21D39A6B2862BA6800097C05 /* SceneDelegate.swift */,
 				21D39A6D2862BA6800097C05 /* ViewController.swift */,
@@ -142,6 +147,15 @@
 				21D39A8C2862BA6B00097C05 /* SampleAppUITestsLaunchTests.swift */,
 			);
 			path = SampleAppUITests;
+			sourceTree = "<group>";
+		};
+		21D39A99286386B300097C05 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				21D39A9A286386D400097C05 /* APIEndpoint.swift */,
+				21D39A9C2863960B00097C05 /* APIPath.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		4C51A40A505B7900C4EB50C0 /* Frameworks */ = {
@@ -407,8 +421,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				21D39A6E2862BA6800097C05 /* ViewController.swift in Sources */,
+				21D39A9D2863960B00097C05 /* APIPath.swift in Sources */,
 				21D39A6A2862BA6800097C05 /* AppDelegate.swift in Sources */,
 				21D39A6C2862BA6800097C05 /* SceneDelegate.swift in Sources */,
+				21D39A9B286386D400097C05 /* APIEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
