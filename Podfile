@@ -7,6 +7,8 @@ target 'SampleApp' do
 
   # Pods for SampleApp
   pod 'RxSwift'
+  pod 'RxAlamofire'
+
   target 'SampleAppTests' do
     inherit! :search_paths
     # Pods for testing
