@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		212A16052863FE880098F1D6 /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212A16042863FE880098F1D6 /* CharacterModel.swift */; };
+		212A16092864D9C40098F1D6 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 212A16082864D9C40098F1D6 /* Info.storyboard */; };
+		212A160B2864DA0F0098F1D6 /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212A160A2864DA0F0098F1D6 /* InfoTableViewController.swift */; };
+		212A160D2864E2800098F1D6 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212A160C2864E2800098F1D6 /* SpinnerViewController.swift */; };
 		21D39A6A2862BA6800097C05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D39A692862BA6800097C05 /* AppDelegate.swift */; };
 		21D39A6C2862BA6800097C05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D39A6B2862BA6800097C05 /* SceneDelegate.swift */; };
 		21D39A6E2862BA6800097C05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D39A6D2862BA6800097C05 /* ViewController.swift */; };
@@ -45,6 +48,9 @@
 /* Begin PBXFileReference section */
 		014CE2F5E5067ABD83EE79C4 /* Pods-SampleApp-SampleAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleApp-SampleAppUITests.release.xcconfig"; path = "Target Support Files/Pods-SampleApp-SampleAppUITests/Pods-SampleApp-SampleAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		212A16042863FE880098F1D6 /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
+		212A16082864D9C40098F1D6 /* Info.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
+		212A160A2864DA0F0098F1D6 /* InfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewController.swift; sourceTree = "<group>"; };
+		212A160C2864E2800098F1D6 /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 		21D39A662862BA6800097C05 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21D39A692862BA6800097C05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21D39A6B2862BA6800097C05 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +113,25 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		212A16062864CCFA0098F1D6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				21D39A6D2862BA6800097C05 /* ViewController.swift */,
+				21D39A6F2862BA6800097C05 /* Main.storyboard */,
+				212A160C2864E2800098F1D6 /* SpinnerViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		212A16072864D9A80098F1D6 /* TableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				212A16082864D9C40098F1D6 /* Info.storyboard */,
+				212A160A2864DA0F0098F1D6 /* InfoTableViewController.swift */,
+			);
+			path = TableViewController;
+			sourceTree = "<group>";
+		};
 		21D39A5D2862BA6800097C05 = {
 			isa = PBXGroup;
 			children = (
@@ -132,12 +157,12 @@
 		21D39A682862BA6800097C05 /* SampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				212A16072864D9A80098F1D6 /* TableViewController */,
+				212A16062864CCFA0098F1D6 /* ViewController */,
 				212A16032863FE640098F1D6 /* Model */,
 				21D39A99286386B300097C05 /* API */,
 				21D39A692862BA6800097C05 /* AppDelegate.swift */,
 				21D39A6B2862BA6800097C05 /* SceneDelegate.swift */,
-				21D39A6D2862BA6800097C05 /* ViewController.swift */,
-				21D39A6F2862BA6800097C05 /* Main.storyboard */,
 				21D39A722862BA6B00097C05 /* Assets.xcassets */,
 				21D39A742862BA6B00097C05 /* LaunchScreen.storyboard */,
 				21D39A772862BA6B00097C05 /* Info.plist */,
@@ -306,6 +331,7 @@
 			files = (
 				21D39A762862BA6B00097C05 /* LaunchScreen.storyboard in Resources */,
 				21D39A732862BA6B00097C05 /* Assets.xcassets in Resources */,
+				212A16092864D9C40098F1D6 /* Info.storyboard in Resources */,
 				21D39A712862BA6800097C05 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,9 +463,11 @@
 				21D39A9F2863AD4700097C05 /* APIManager.swift in Sources */,
 				21D39A6E2862BA6800097C05 /* ViewController.swift in Sources */,
 				21D39A9D2863960B00097C05 /* APIPath.swift in Sources */,
+				212A160B2864DA0F0098F1D6 /* InfoTableViewController.swift in Sources */,
 				21D39A6A2862BA6800097C05 /* AppDelegate.swift in Sources */,
 				21D39A6C2862BA6800097C05 /* SceneDelegate.swift in Sources */,
 				212A16052863FE880098F1D6 /* CharacterModel.swift in Sources */,
+				212A160D2864E2800098F1D6 /* SpinnerViewController.swift in Sources */,
 				21D39A9B286386D400097C05 /* APIEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
