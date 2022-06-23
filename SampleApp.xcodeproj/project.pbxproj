@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		212A16052863FE880098F1D6 /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212A16042863FE880098F1D6 /* CharacterModel.swift */; };
 		21D39A6A2862BA6800097C05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D39A692862BA6800097C05 /* AppDelegate.swift */; };
 		21D39A6C2862BA6800097C05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D39A6B2862BA6800097C05 /* SceneDelegate.swift */; };
 		21D39A6E2862BA6800097C05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D39A6D2862BA6800097C05 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 		21D39A8D2862BA6B00097C05 /* SampleAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D39A8C2862BA6B00097C05 /* SampleAppUITestsLaunchTests.swift */; };
 		21D39A9B286386D400097C05 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D39A9A286386D400097C05 /* APIEndpoint.swift */; };
 		21D39A9D2863960B00097C05 /* APIPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D39A9C2863960B00097C05 /* APIPath.swift */; };
+		21D39A9F2863AD4700097C05 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D39A9E2863AD4700097C05 /* APIManager.swift */; };
 		81CE5D8A3E85CD4BA64D5AFE /* Pods_SampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF31BB8A9E9455C01BC3A87 /* Pods_SampleAppTests.framework */; };
 		8266576CF24C71A9ECD4DA77 /* Pods_SampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0DFD591260557100696A078 /* Pods_SampleApp.framework */; };
 		9BA863BB91912E615C916306 /* Pods_SampleApp_SampleAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C0E2B5F67389F51197EF8F /* Pods_SampleApp_SampleAppUITests.framework */; };
@@ -42,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		014CE2F5E5067ABD83EE79C4 /* Pods-SampleApp-SampleAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleApp-SampleAppUITests.release.xcconfig"; path = "Target Support Files/Pods-SampleApp-SampleAppUITests/Pods-SampleApp-SampleAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		212A16042863FE880098F1D6 /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
 		21D39A662862BA6800097C05 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21D39A692862BA6800097C05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21D39A6B2862BA6800097C05 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +60,7 @@
 		21D39A8C2862BA6B00097C05 /* SampleAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		21D39A9A286386D400097C05 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		21D39A9C2863960B00097C05 /* APIPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPath.swift; sourceTree = "<group>"; };
+		21D39A9E2863AD4700097C05 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		50F08996773B076E8CF0525F /* Pods-SampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleApp.debug.xcconfig"; path = "Target Support Files/Pods-SampleApp/Pods-SampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		77C0E2B5F67389F51197EF8F /* Pods_SampleApp_SampleAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleApp_SampleAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F39F3FB652E8968EF95B56E /* Pods-SampleApp-SampleAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleApp-SampleAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-SampleApp-SampleAppUITests/Pods-SampleApp-SampleAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -95,6 +99,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		212A16032863FE640098F1D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				212A16042863FE880098F1D6 /* CharacterModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		21D39A5D2862BA6800097C05 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +132,7 @@
 		21D39A682862BA6800097C05 /* SampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				212A16032863FE640098F1D6 /* Model */,
 				21D39A99286386B300097C05 /* API */,
 				21D39A692862BA6800097C05 /* AppDelegate.swift */,
 				21D39A6B2862BA6800097C05 /* SceneDelegate.swift */,
@@ -154,6 +167,7 @@
 			children = (
 				21D39A9A286386D400097C05 /* APIEndpoint.swift */,
 				21D39A9C2863960B00097C05 /* APIPath.swift */,
+				21D39A9E2863AD4700097C05 /* APIManager.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -420,10 +434,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21D39A9F2863AD4700097C05 /* APIManager.swift in Sources */,
 				21D39A6E2862BA6800097C05 /* ViewController.swift in Sources */,
 				21D39A9D2863960B00097C05 /* APIPath.swift in Sources */,
 				21D39A6A2862BA6800097C05 /* AppDelegate.swift in Sources */,
 				21D39A6C2862BA6800097C05 /* SceneDelegate.swift in Sources */,
+				212A16052863FE880098F1D6 /* CharacterModel.swift in Sources */,
 				21D39A9B286386D400097C05 /* APIEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
