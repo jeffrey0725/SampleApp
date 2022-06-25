@@ -103,7 +103,11 @@ class InfoTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if let vc = UIStoryboard.init(name: "Info", bundle: Bundle.main).instantiateViewController(withIdentifier: "CharacterDetailViewController") as? CharacterDetailViewController {
+            let data = characterModel?.characters?[indexPath.row]
+            vc.characterDetail = data
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 
     /*
