@@ -21,6 +21,8 @@ class InfoTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.navigationItem.title = "Characters"
+        registerTableViewCell()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,27 +32,39 @@ class InfoTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         startLoading()
-        getCharacters({ (response) in
-            self.characterModel = response
+        callInitApi {
             self.stopLoading()
-        })
+            self.tableView.reloadData()
+        }
     }
     
+    //MARK: - Loading
     func startLoading() {
         addChild(child)
         child.view.frame = view.frame
         view.addSubview(child.view)
         child.didMove(toParent: self)
     }
-    
+
     func stopLoading() {
         child.willMove(toParent: nil)
         child.view.removeFromSuperview()
         child.removeFromParent()
     }
     
+    //MARK: - API
     func callInitApi(_ success: @escaping () -> ()) {
+        let dispatchGroup = DispatchGroup()
         
+        dispatchGroup.enter()
+        getCharacters({ (response) in
+            self.characterModel = response
+            dispatchGroup.leave()
+        })
+        
+        dispatchGroup.notify(queue: .main, execute: {
+            success()
+        })
     }
     
     func getCharacters(_ success: @escaping (CharacterModel?) -> ()) {
@@ -61,17 +75,35 @@ class InfoTableViewController: UITableViewController {
             })
         }
     }
+    
+    //MARK: - Register table view cell
+    func registerTableViewCell() {
+        tableView.register(UINib(nibName: "CharacterTableViewCell", bundle: nil), forCellReuseIdentifier: "CharacterTableViewCell")
+    }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+//        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+//        return 0
+        return characterModel?.characters?.count ?? 0
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterTableViewCell", for: indexPath) as! CharacterTableViewCell
+        let data = characterModel?.characters?[indexPath.row]
+        cell.lblTitle.text = data?.name ?? ""
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
 
     /*
