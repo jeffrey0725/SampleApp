@@ -34,4 +34,5 @@ struct Characters: Codable {
     var parkAttractions: [String]?
     var allies: [String]?
     var enemies: [String]?
+    var imageUrl: String?
 }
