@@ -22,7 +22,7 @@ class APIManager {
         requestData(.get, url)
             .debug()
             .subscribe(onNext: { (response, data) in
-                print(response.statusCode)
+                print("--------HTTP status code: \(response.statusCode)--------")
                 do {
                     let decodedData = try JSONDecoder().decode(CharacterModel.self, from: data)
                     success(decodedData)
