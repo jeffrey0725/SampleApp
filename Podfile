@@ -6,8 +6,8 @@ target 'SampleApp' do
   use_frameworks!
 
   # Pods for SampleApp
-  pod 'RxSwift'
-  pod 'RxAlamofire'
+  pod 'RxSwift', '= 6.5.0'
+  pod 'RxAlamofire', '= 6.1.1'
 
   target 'SampleAppTests' do
     inherit! :search_paths
