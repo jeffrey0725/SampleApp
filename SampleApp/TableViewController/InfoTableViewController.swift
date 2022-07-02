@@ -109,7 +109,9 @@ class InfoTableViewController: UITableViewController {
                         }
                         self.characterModel?.nextPage = data.nextPage ?? ""
                     }
-                    self.tableView.reloadData()
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
                 })
             }
         }
