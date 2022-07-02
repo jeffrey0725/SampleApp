@@ -99,6 +99,20 @@ class InfoTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterTableViewCell", for: indexPath) as! CharacterTableViewCell
         let data = characterModel?.characters?[indexPath.row]
         cell.lblTitle.text = data?.name ?? ""
+        if indexPath.row == (characterModel?.characters?.count ?? 0) - 1 {
+            pageCount += 1
+            if characterModel?.nextPage?.count ?? 0 > 0 {
+                getCharacters({ (response) in
+                    if let data = response {
+                        for character in data.characters ?? [] {
+                            self.characterModel?.characters?.append(character)
+                        }
+                        self.characterModel?.nextPage = data.nextPage ?? ""
+                    }
+                    self.tableView.reloadData()
+                })
+            }
+        }
         return cell
     }
     
