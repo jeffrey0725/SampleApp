@@ -23,6 +23,10 @@ class InfoTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         self.navigationItem.title = "Characters"
         registerTableViewCell()
+        callInitApi {
+            self.stopLoading()
+            self.tableView.reloadData()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,11 +35,6 @@ class InfoTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        startLoading()
-        callInitApi {
-            self.stopLoading()
-            self.tableView.reloadData()
-        }
     }
     
     //MARK: - Loading
