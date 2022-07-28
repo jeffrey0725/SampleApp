@@ -7,15 +7,19 @@
 
 import UIKit
 
-class CharacterDetailViewController: UIViewController {
+class CharacterDetailViewController: UIViewController, UIScrollViewDelegate {
     
     var characterDetail: Characters?
+    
+    @IBOutlet weak var ivIcon: UIImageView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.navigationItem.title = characterDetail?.name ?? ""
+        setupUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -26,6 +30,12 @@ class CharacterDetailViewController: UIViewController {
         super.viewDidAppear(animated)
     }
     
+    func setupUI() {
+        if let imgURL = URL(string: characterDetail?.imageUrl ?? "") {
+            let imgData = try? Data(contentsOf: imgURL)
+            ivIcon.image = UIImage(data: imgData!)
+        }
+    }
 
     /*
     // MARK: - Navigation

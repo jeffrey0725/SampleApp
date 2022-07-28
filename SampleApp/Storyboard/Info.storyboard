@@ -50,19 +50,19 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oqa-J1-Nrt">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyn-bn-fVM">
-                                                <rect key="frame" x="20" y="969" width="374" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4aq-19-jvN">
+                                                <rect key="frame" x="0.0" y="69" width="414" height="200"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="Ypl-uw-aSZ"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="nyn-bn-fVM" secondAttribute="bottom" constant="10" id="ALl-Ka-lxX"/>
                                             <constraint firstAttribute="height" constant="1000" id="DNB-R4-5I6"/>
-                                            <constraint firstAttribute="trailing" secondItem="nyn-bn-fVM" secondAttribute="trailing" constant="20" id="FKV-Ak-6N0"/>
-                                            <constraint firstItem="nyn-bn-fVM" firstAttribute="leading" secondItem="Oqa-J1-Nrt" secondAttribute="leading" constant="20" id="Ssb-fP-uCr"/>
+                                            <constraint firstItem="4aq-19-jvN" firstAttribute="leading" secondItem="Oqa-J1-Nrt" secondAttribute="leading" id="t3r-pB-jh2"/>
+                                            <constraint firstItem="4aq-19-jvN" firstAttribute="top" secondItem="Oqa-J1-Nrt" secondAttribute="top" constant="69" id="xee-b8-WTD"/>
+                                            <constraint firstAttribute="trailing" secondItem="4aq-19-jvN" secondAttribute="trailing" id="zvP-D1-c4L"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -86,6 +86,10 @@
                             <constraint firstItem="GdX-e5-1Dg" firstAttribute="leading" secondItem="jCR-aW-y6E" secondAttribute="leading" id="u3a-aH-Pvs"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ivIcon" destination="4aq-19-jvN" id="5cC-Ch-6t5"/>
+                        <outlet property="scrollView" destination="GdX-e5-1Dg" id="Y4u-fw-BVY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Wg-22-Z90" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
