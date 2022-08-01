@@ -23,7 +23,7 @@ class InfoTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         self.navigationItem.title = "Characters"
         registerTableViewCell()
-        callInitApi {
+        initAPI {
             self.stopLoading()
             self.tableView.reloadData()
         }
@@ -52,7 +52,7 @@ class InfoTableViewController: UITableViewController {
     }
     
     //MARK: - API
-    func callInitApi(_ success: @escaping () -> ()) {
+    func initAPI(_ success: @escaping () -> ()) {
         let dispatchGroup = DispatchGroup()
         
         dispatchGroup.enter()

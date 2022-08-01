@@ -31,10 +31,14 @@ class CharacterDetailViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func setupUI() {
+        // Setup image
         if let imgURL = URL(string: characterDetail?.imageUrl ?? "") {
             let imgData = try? Data(contentsOf: imgURL)
             ivIcon.image = UIImage(data: imgData!)
         }
+        
+        // Setup title
+        
     }
 
     /*
