@@ -12,6 +12,7 @@ class CharacterDetailViewController: UIViewController, UIScrollViewDelegate {
     var characterDetail: Characters?
     
     @IBOutlet weak var ivIcon: UIImageView!
+    @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
@@ -19,7 +20,7 @@ class CharacterDetailViewController: UIViewController, UIScrollViewDelegate {
 
         // Do any additional setup after loading the view.
         self.navigationItem.title = characterDetail?.name ?? ""
-        setupUI()
+        setupLayout()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,7 +31,7 @@ class CharacterDetailViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidAppear(animated)
     }
     
-    func setupUI() {
+    func setupLayout() {
         // Setup image
         if let imgURL = URL(string: characterDetail?.imageUrl ?? "") {
             let imgData = try? Data(contentsOf: imgURL)
@@ -38,6 +39,10 @@ class CharacterDetailViewController: UIViewController, UIScrollViewDelegate {
         }
         
         // Setup title
+        lblName.text = characterDetail?.name ?? ""
+        lblName.textAlignment = .center
+        
+        // Setup
         
     }
 

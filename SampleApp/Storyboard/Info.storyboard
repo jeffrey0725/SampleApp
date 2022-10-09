@@ -56,10 +56,19 @@
                                                     <constraint firstAttribute="height" constant="200" id="Ypl-uw-aSZ"/>
                                                 </constraints>
                                             </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOx-VR-Y3p">
+                                                <rect key="frame" x="0.0" y="289" width="414" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="bOx-VR-Y3p" firstAttribute="leading" secondItem="Oqa-J1-Nrt" secondAttribute="leading" id="5qf-ka-I7a"/>
                                             <constraint firstAttribute="height" constant="1000" id="DNB-R4-5I6"/>
+                                            <constraint firstItem="bOx-VR-Y3p" firstAttribute="top" secondItem="4aq-19-jvN" secondAttribute="bottom" constant="20" id="jxc-u1-kV0"/>
+                                            <constraint firstAttribute="trailing" secondItem="bOx-VR-Y3p" secondAttribute="trailing" id="lTg-iq-lAt"/>
                                             <constraint firstItem="4aq-19-jvN" firstAttribute="leading" secondItem="Oqa-J1-Nrt" secondAttribute="leading" id="t3r-pB-jh2"/>
                                             <constraint firstItem="4aq-19-jvN" firstAttribute="top" secondItem="Oqa-J1-Nrt" secondAttribute="top" constant="69" id="xee-b8-WTD"/>
                                             <constraint firstAttribute="trailing" secondItem="4aq-19-jvN" secondAttribute="trailing" id="zvP-D1-c4L"/>
@@ -88,6 +97,7 @@
                     </view>
                     <connections>
                         <outlet property="ivIcon" destination="4aq-19-jvN" id="5cC-Ch-6t5"/>
+                        <outlet property="lblName" destination="bOx-VR-Y3p" id="fX3-oe-RBG"/>
                         <outlet property="scrollView" destination="GdX-e5-1Dg" id="Y4u-fw-BVY"/>
                     </connections>
                 </viewController>
